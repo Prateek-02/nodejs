@@ -90,5 +90,13 @@ fs.open('input.txt','r+',function(err,fd){
         if((bytes>0)){
             console.log(buff.slice(0,bytes).toString());
         }
+
+        // close the opened file
+        fs.close(fd,function(err){
+            if(err){
+                console.log(err);
+            }
+            console.log("File closed successfully");
+        });
     });
 });

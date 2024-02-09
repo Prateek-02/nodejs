@@ -69,6 +69,9 @@ fs.writeFile('input.txt', 'Hello World',function(err){
 });
 */
 
+// open the file and read no. of bytes 
+
+
 var fs= require("fs");
 var buff = new Buffer(1024);
 
@@ -98,5 +101,22 @@ fs.open('input.txt','r+',function(err,fd){
             }
             console.log("File closed successfully");
         });
+
+        // Trunate
+        fs.truncate(fd,10,function(err){
+            if(err){
+                console.log(err);
+            }
+            console.log("File closed");
+
+            fs.read(fd,buff,0,buff.length,0,function(err,bytes){
+                if(err){
+                    console.log(err);
+                }
+               
+            });
+        });
     });
 });
+
+

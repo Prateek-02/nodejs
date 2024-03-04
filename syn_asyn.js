@@ -20,7 +20,7 @@ console.log("Program ended");
 var fs = require("fs");
 
 // Asynchronus opening file 
-console.log("Going to opoen file!");
+console.log("Going to open file!");
 fs.open('input.txt', 'r+', function(err,fd){
     if(err){
         return console.error(err);

@@ -1,0 +1,10 @@
+{
+    "Name": "MG Hector",
+    "Type": "Electric",
+    "Functions": {
+        "Speed": "220km/h",
+        "RechargeTime": "3hr",
+        "Sunroof": "Present"
+    },
+    "key_to_modify": "new_value"
+}
